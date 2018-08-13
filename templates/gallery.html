@@ -32,13 +32,14 @@ media gallery
 
 
 
+
 </style>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 {% endblock %}
 {% block navbar %}
-<a href="{{ url_for(" threads.view", thread_id=thread_id) }}" class="nav-item nav-link">Back to thread</a>
-<a href="{{ url_for(" boards.catalog", board_id=board_id) }}" class="nav-item nav-link">Catalog</a>
+<a href="{{ url_for("threads.view", thread_id=thread_id) }}" class="nav-item nav-link">Back to thread</a>
+<a href="{{ url_for("boards.catalog", board_id=board_id) }}" class="nav-item nav-link">Catalog</a>
 {% endblock %}
 {% block content %}
 <div class="container-fluid">
@@ -49,12 +50,13 @@ media gallery
 
 
 
+
         </script>
         {% for post in posts %}
         {% if post["media"] %}
         <div class="gallery-entry">
-            <a href="{{ url_for(" upload.file", media_id=post["media"]) }}">
-            <img class="img-fluid img-thumbnail" src="{{ url_for(" upload.thumb", media_id=post["media"]) }}">
+            <a href="{{ url_for("upload.file", media_id=post["media"]) }}">
+            <img class="img-fluid img-thumbnail" src="{{ url_for("upload.thumb", media_id=post["media"]) }}">
             </a>
             {% if post["media_ext"] in ["gif", "webm"] %}
             <small class="text-muted">Animated - click to play</small>
@@ -74,6 +76,7 @@ media gallery
 			 horizontalOrder: true
 		 })
 	 })
+
 
 
 
