@@ -1,8 +1,11 @@
 import datetime as _datetime
 
 from markdown import markdown
+from sqlalchemy.orm import relationship
 
+from model.Media import Media
 from model.PostReplyExtension import PostReplyExtension
+from model.Poster import Poster
 from model.ThreadRootExtension import ThreadRootExtension
 from outputmixin import OutputMixin
 from shared import db
@@ -26,6 +29,8 @@ class Post(OutputMixin, db.Model):
     subject = db.Column(db.String(64), nullable=True)
     thread = db.Column(db.Integer, db.ForeignKey("thread.id"), nullable=False)
     datetime = db.Column(db.DateTime, nullable=False, default=_datetime.datetime.utcnow)
-    poster = db.Column(db.Integer, db.ForeignKey("poster.id"), nullable=False)
-    media = db.Column(db.Integer, db.ForeignKey("media.id"), nullable=True)
+    poster_id = db.Column(db.Integer, db.ForeignKey("poster.id"), nullable=False)
+    poster = relationship(Poster, uselist=False)
+    media_id = db.Column(db.Integer, db.ForeignKey("media.id"), nullable=True)
+    media = bar = relationship(Media, uselist=False)
     spoiler = db.Column(db.Boolean, nullable=True)
