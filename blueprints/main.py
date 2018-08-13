@@ -3,7 +3,6 @@ from markdown import markdown
 
 from model.Firehose import Firehose
 
-
 main_blueprint = Blueprint('main', __name__, template_folder='template')
 
 

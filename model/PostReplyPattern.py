@@ -1,8 +1,8 @@
 from xml import etree
 
 from flask import url_for
-from markdown.util import etree
 from markdown.inlinepatterns import Pattern
+from markdown.util import etree
 
 from model.Reply import REPLY_REGEXP
 

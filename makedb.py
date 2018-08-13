@@ -1,12 +1,8 @@
 import os
 
-
-from customjsonencoder import CustomJSONEncoder
 from model.Board import Board
 from model.Slip import gen_slip
 from model.Tag import Tag
-import model.Media
-import model.Poster
 from shared import db
 
 db.create_all()

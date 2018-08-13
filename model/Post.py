@@ -1,5 +1,4 @@
 import datetime as _datetime
-from flask import url_for
 
 from markdown import markdown
 
@@ -7,6 +6,7 @@ from model.PostReplyExtension import PostReplyExtension
 from model.ThreadRootExtension import ThreadRootExtension
 from outputmixin import OutputMixin
 from shared import db
+
 
 def render_for_catalog(posts):
     for post in posts:

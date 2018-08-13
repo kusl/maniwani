@@ -13,7 +13,6 @@ from model.NewThreadResource import NewThreadResource
 from model.ThreadPostsResource import ThreadPostsResource
 from shared import app, rest_api
 
-
 app.register_blueprint(main_blueprint, url_prefix='/')
 app.register_blueprint(boards_blueprint, url_prefix='/boards')
 app.register_blueprint(threads_blueprint, url_prefix='/threads')

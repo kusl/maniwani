@@ -10,7 +10,6 @@ from model.Thread import Thread
 from model.ThreadPosts import ThreadPosts
 from shared import db
 
-
 threads_blueprint = Blueprint('threads', __name__, template_folder='template')
 threads_blueprint.add_app_template_global(url_for_post)
 

@@ -5,7 +5,6 @@ from model.Session import Session
 from model.Slip import Slip, gen_slip, make_session, get_slip, slip_from_id
 from shared import db
 
-
 slip_blueprint = Blueprint('slip', __name__, template_folder='template')
 slip_blueprint.add_app_template_global(get_slip)
 slip_blueprint.add_app_template_global(slip_from_id)

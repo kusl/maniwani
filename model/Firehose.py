@@ -1,10 +1,10 @@
 from flask.json import jsonify
 from sqlalchemy import desc
 
-from shared import db
 from model.BoardListCatalog import BoardCatalog
 from model.Post import render_for_catalog
 from model.Thread import Thread
+from shared import db
 
 
 class Firehose:

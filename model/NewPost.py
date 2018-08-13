@@ -6,12 +6,12 @@ from flask import current_app, request
 from flask_restful import reqparse, inputs
 
 from model.Media import Media
-from model.Poster import Poster
 from model.Post import Post
+from model.Poster import Poster
 from model.Reply import Reply, REPLY_REGEXP
-from model.Thread import Thread
 from model.Slip import get_slip
-from shared import db, ip_to_int, gen_poster_id
+from model.Thread import Thread
+from shared import db, gen_poster_id
 
 
 class NewPost:

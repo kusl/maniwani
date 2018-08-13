@@ -5,7 +5,6 @@ from flask import Blueprint, current_app, send_from_directory
 from model.Media import Media
 from shared import db
 
-
 upload_blueprint = Blueprint('upload', __name__, template_folder='template')
 
 
